@@ -16,21 +16,19 @@ with open(INPUT_DIR.joinpath('Random').joinpath(out_file), "w") as file:
         line = str(randint) + '\n'
         file.write(line)
 
-ans = input("Do you want to create shorted input of random data?(Y or N)")
-if ans=='Y':
-    temp = data.copy()
-    temp.sort()
-    with open(INPUT_DIR.joinpath('Sorted').joinpath(out_file), "w") as file:
-        for i in temp:
-            line = str(i) + '\n'
-            file.write(line)
+# generating sorted input of random data
+temp = data.copy()
+temp.sort()
+with open(INPUT_DIR.joinpath('Sorted').joinpath(out_file), "w") as file:
+    for i in temp:
+        line = str(i) + '\n'
+        file.write(line)
 
-ans = input("Do you want to create reversed sorted input of random data?(Y or N)")
-if ans=='Y':
-    temp = data.copy()
-    temp.sort()
-    temp.reverse()
-    with open(INPUT_DIR.joinpath('Reverse').joinpath(out_file), "w") as file:
-        for i in temp:
-            line = str(i) + '\n'
-            file.write(line)
+#reversed sorted input of random data
+temp = data.copy()
+temp.sort()
+temp.reverse()
+with open(INPUT_DIR.joinpath('Reverse').joinpath(out_file), "w") as file:
+    for i in temp:
+        line = str(i) + '\n'
+        file.write(line)
